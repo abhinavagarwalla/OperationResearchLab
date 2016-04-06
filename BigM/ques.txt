@@ -1,9 +1,3 @@
-Dear Students,
-        Today you will write a program to Solve a LPP  using  Big - M method
-This method is also known as  Charne's  Penalty method.
-
-At first Solve the following  Examples. Then write your program using Big M method.
-
 1.   Max: z =   5 x1  +  6 x2
 Subject   to      2 x1 + 3 x2    <= 6
                           3 x1  +  2 x2   >= 18

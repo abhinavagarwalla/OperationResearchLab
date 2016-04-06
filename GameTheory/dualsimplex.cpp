@@ -89,7 +89,7 @@ int main()
 			}
 		}
 		
-		cout << " Value of minpos is " << minpos << "  and invar is  " << in_var << endl;
+		cout << " Value of minpos is " << minpos << " and invar is " << in_var << endl;
 		int pivot = -1;
 		float minp = 10000;
 		for(int i=0;i< eqn;i++)
@@ -106,8 +106,8 @@ int main()
 			incos = 1;
 			break;
 		}
-		cout << "PIvot " << temp[pivot][minpos] << " at pos " << pivot;
-		cout << "Most nbegatiove element " << min;
+		cout << "Pivot " << temp[pivot][minpos] << " at pos " << pivot;
+		cout << "Most negative element " << min;
 		
 		d[minpos] = 1;
 		dmap[minpos] = pivot;
@@ -118,12 +118,11 @@ int main()
 			for(int j=0;j<=in_var;j++)
 			{
 				if(i==pivot || j==minpos)continue;
-				//cout <<  "\n\n Debuggind pqrs  for i = " << i << " and j=  " << j << "\n";
+				//cout << "\n\n Debuggind pqrs for i = " << i << " and j= " << j << "\n";
 				//cout << " q " << temp[pivot][j] << " r " << temp[i][minpos];
 				temp[i][j] = temp[i][j] - 1.0*temp[pivot][j]*temp[i][minpos]/p;
 			}
 		}
-
 		for(int i=0;i<=eqn; i++)
 		{
 			if(i==pivot)continue;
@@ -135,7 +134,6 @@ int main()
 			temp[pivot][j] = temp[pivot][j]/p;
 		}
 		temp[pivot][minpos] = 1.0/temp[pivot][minpos];
-
 		
 		
 		cout << "Simplex table\n ";

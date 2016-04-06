@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int d[10]={0};
 int dmap[10]={-1};
 float mat[10][10], b[10], temp[10][10], constants[10];
@@ -18,12 +17,11 @@ int main()
 	cin >> eqn;
 	for(int i = 0 ; i < eqn ; i++)
 	{
-		cout << "Enter coefficients and constant term of equation no " << i+1 << " seperated by spaces:\n";
+		cout << "Enter coefficients and constant term of equation no " << i+1 << " separated by spaces:\n";
 		for(int j = 0 ; j <= in_var ; j++)
 		{
 			cin >> mat[i][j];
 		}
-
 	}
 	
 	for(int i=0;i < eqn;i++)
@@ -45,7 +43,7 @@ int main()
 	
 	int max_or_min = 0;
 	cout << "Enter 1 for maximisation: ";
-	cin >>  max_or_min;
+	cin >> max_or_min;
 	cout << "Initial simplex table\n ";
 	for(int i=0;i <= eqn;i++)
 	{
@@ -56,7 +54,7 @@ int main()
 		cout << endl;
 	}
 	int dummy=1;
-	//cout << "Enyter a number ";
+	//cout << "Enter a number ";
 	//cin >> dummy;cout << " Dummy is " << dummy;
 	cout << " Flag is " << flag;
 	while(flag){
@@ -86,7 +84,7 @@ int main()
 			}
 		}
 		
-		cout << " Value of minpos is " << minpos << "  and invar is  " << in_var << endl;
+		cout << " Value of minpos is " << minpos << " and invar is " << in_var << endl;
 		int pivot = -1;
 		float minp = 10000;
 		for(int i=0;i< eqn;i++)
@@ -103,8 +101,8 @@ int main()
 			incos = 1;
 			break;
 		}
-		cout << "PIvot " << temp[pivot][minpos] << " at pos " << pivot;
-		cout << "Most nbegatiove element " << min;
+		cout << "Pivot " << temp[pivot][minpos] << " at pos " << pivot;
+		cout << "Most negative element " << min;
 		
 		d[minpos] = 1;
 		dmap[minpos] = pivot;
@@ -115,12 +113,11 @@ int main()
 			for(int j=0;j<=in_var;j++)
 			{
 				if(i==pivot || j==minpos)continue;
-				//cout <<  "\n\n Debuggind pqrs  for i = " << i << " and j=  " << j << "\n";
+				//cout << "\n\n Debuggind pqrs for i = " << i << " and j= " << j << "\n";
 				//cout << " q " << temp[pivot][j] << " r " << temp[i][minpos];
 				temp[i][j] = temp[i][j] - 1.0*temp[pivot][j]*temp[i][minpos]/p;
 			}
 		}
-
 		for(int i=0;i<=eqn; i++)
 		{
 			if(i==pivot)continue;
@@ -132,7 +129,6 @@ int main()
 			temp[pivot][j] = temp[pivot][j]/p;
 		}
 		temp[pivot][minpos] = 1.0/temp[pivot][minpos];
-
 		
 		
 		cout << "Simplex table\n ";
@@ -146,10 +142,9 @@ int main()
 		}
 		//flag = 0;
 	}
-
 	if(incos)
 	{
-		cout << "The given system of equations inconsistent  ";
+		cout << "The given system of equations inconsistent ";
 		return 0;
 	}
 	if(max_or_min){
@@ -174,3 +169,4 @@ int main()
 	}
 	return 0;
 }
+
