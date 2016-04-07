@@ -94,6 +94,7 @@ int main()
 		float minp = 10000;
 		for(int i=0;i< eqn;i++)
 		{
+			if(temp[i][minpos]!=0)
 			if(1.0*temp[i][in_var]/temp[i][minpos] < minp && 1.0*temp[i][in_var]/temp[i][minpos]>0)
 			{
 				minp = 1.0*temp[i][in_var]/temp[i][minpos];

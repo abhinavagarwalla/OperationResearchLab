@@ -37,7 +37,7 @@ int main()
 	cout << "Enter the objective function to be maximised\n";
 	for(int i=0;i<=in_var;i++)
 	{
-		int a=0;
+		float a=0;
 		cin >> a;
 		if(a>0)flag=1;
 		temp[eqn][i] = -a;

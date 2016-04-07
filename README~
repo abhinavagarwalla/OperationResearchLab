@@ -1,0 +1,7 @@
+To run any program:
+
+g++ <program_name>
+./a.out < in1.txt
+./a.out < in2.txt
+
+similarly, for more input files
