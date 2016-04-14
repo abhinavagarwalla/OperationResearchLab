@@ -20,6 +20,8 @@ void Tablaeu(double **A,double *Z,int m,int n)
                                              cout<<"x"<<j+1<<"=";
                                              cin>>A[i][j];
                                              }        
+                          cout<<"Enter sign (< or >)"<<endl;
+		                  cin>>sign;
 		                  cout<<"Enter right-hand side"<<endl;
 		                  cin>>A[i][n];
 		                  if(sign==g) 
@@ -129,15 +131,13 @@ void Result(double**A,double*M,int m,int n) {
 
 int main() {
 	int i,n,m;
+	cout<<"For maximisation Enter 0, Else Enter 1 for minimisation\n ";
 	int check=0;
-
-	cout << "Enter number of rows in payoff matrix: ";cin >> n;
-	//cout<<"Enter the number of variables:";
-	//cin>>n;
-	//cout<<"Enter the number of constraints:";
-	//cin>>m;
-	cout << "Enter number of cols in payoff matrix: ";cin >> m;
-
+	cin>>check;
+	cout<<"Enter the number of variables:";
+	cin>>n;
+	cout<<"Enter the number of constraints:";
+	cin>>m;
 	double *Z,*M,**A;
 	Z=(double *)malloc(n*sizeof(double));
 

@@ -8,3 +8,10 @@ Ques 2. Find inverse of matrix:
 [0 1 2 3]
 [0 0 1 2]
 [0 0 0 1]
+
+Theory
+B = B^-1
+e = (B^-1)c
+n = [-(e1/er) 0.... 1/er...]
+Er = replace n at rth column of identity matrix
+Br^-1 = Er * B^-1

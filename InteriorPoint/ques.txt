@@ -1,0 +1,10 @@
+Theory
+
+D = diag(x1, x2...)
+A~ = AD
+C~ = DC
+P = 1 - (A~)` * (A~ * (A~)`)^-1 * A~
+Cp = P*C~
+v = larget -ve value on Cp 
+X~new = X~ + (alpha/v)*Cp
+X^(k+1) = D * X~new

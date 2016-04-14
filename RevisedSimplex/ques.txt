@@ -13,3 +13,17 @@ subject to
 3x1 +x2 +2x3  <= 180
 x1 +3x2 + 2x3  <=  160
 x1,x2,x3 >= 0
+
+Theory
+Step 1. y = Cb * B^-1
+	zj - cj = Y * Pj - cj	
+	select entering as most negative
+
+Step 2. alpha^i = B^-1 * Pi
+	Xb = B^-1 * b
+	theta = min(Xb/alpha^i)
+
+Step 3. j = departing variable selected
+	B = [...P^j..] -> B-1
+	
+Xb = B-1 * b
